@@ -35,7 +35,7 @@ CREATE TABLE `avisos` (
   `fecha_publicacion` date NOT NULL,
   `id_usuario` int NOT NULL,
   `hora` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `avisos`
@@ -54,7 +54,7 @@ INSERT INTO `avisos` (`id`, `titulo`, `aviso`, `fecha_publicacion`, `id_usuario`
 CREATE TABLE `categoria` (
   `id` int NOT NULL,
   `nombre` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `categoria`
@@ -80,7 +80,7 @@ INSERT INTO `categoria` (`id`, `nombre`) VALUES
 CREATE TABLE `cesta` (
   `id` int NOT NULL,
   `id_usuario` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE `cesta_producto` (
   `id` int NOT NULL,
   `id_cesta` int NOT NULL,
   `id_producto` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -104,7 +104,7 @@ CREATE TABLE `detalles_pedido` (
   `id` int NOT NULL,
   `id_pedido` int NOT NULL,
   `id_producto` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `detalles_pedido`
@@ -130,13 +130,13 @@ INSERT INTO `detalles_pedido` (`id`, `id_pedido`, `id_producto`) VALUES
 CREATE TABLE `eventos` (
   `id` int NOT NULL,
   `nombre` varchar(255) NOT NULL,
-  `ubicacion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `ubicacion` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `link` varchar(255) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_fin` date NOT NULL,
   `id_usuario` int NOT NULL,
   `imagen` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `eventos`
@@ -159,7 +159,7 @@ CREATE TABLE `favoritos` (
   `id` int NOT NULL,
   `id_usuario` int NOT NULL,
   `id_usuariopin` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `favoritos`
@@ -191,7 +191,7 @@ CREATE TABLE `informes` (
   `informe` varchar(255) NOT NULL,
   `id_usuarioreferenciado` int NOT NULL,
   `estado` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `informes`
@@ -211,7 +211,7 @@ CREATE TABLE `listado_evento` (
   `id_evento` int NOT NULL,
   `id_usuario` int NOT NULL,
   `estado` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `listado_evento`
@@ -238,7 +238,7 @@ CREATE TABLE `megusta` (
   `id_usuario` int NOT NULL,
   `id_publicacion` int NOT NULL,
   `megusta` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `megusta`
@@ -279,7 +279,7 @@ CREATE TABLE `pedidos` (
   `direccion` varchar(255) NOT NULL,
   `telefono` varchar(14) NOT NULL,
   `pago` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pedidos`
@@ -311,7 +311,7 @@ CREATE TABLE `productos` (
   `id_tipo` int NOT NULL,
   `id_usuario` int NOT NULL,
   `archivos` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -346,7 +346,7 @@ CREATE TABLE `publicaciones` (
   `id_usuario` int NOT NULL,
   `megusta` int NOT NULL,
   `imagen` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `publicaciones`
@@ -374,7 +374,7 @@ INSERT INTO `publicaciones` (`id`, `titulo`, `descripcion`, `tipo`, `id_categori
 CREATE TABLE `tipo_producto` (
   `id` int NOT NULL,
   `nombre` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_producto`
@@ -393,7 +393,7 @@ INSERT INTO `tipo_producto` (`id`, `nombre`) VALUES
 CREATE TABLE `tipo_usuario` (
   `id` int NOT NULL,
   `nombre` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_usuario`
@@ -421,7 +421,7 @@ CREATE TABLE `usuarios` (
   `id_tipo` int NOT NULL,
   `imagen` varchar(255) NOT NULL,
   `biografia` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
